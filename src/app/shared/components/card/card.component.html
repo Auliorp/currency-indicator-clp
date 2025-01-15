@@ -1,0 +1,11 @@
+<div *ngIf="currencyData">
+  <h3>Precios de Divisas</h3>
+  <ul>
+    <li>Dólar (USD): {{ currencyData.dolar.valor }} CLP</li>
+    <li>Euro (EUR): {{ currencyData.euro.valor }} CLP</li>
+    <li>UF: {{ currencyData.uf.valor }} CLP</li>
+  </ul>
+</div>
+<div *ngIf="!currencyData">
+  <p>Cargando datos...</p>
+</div>

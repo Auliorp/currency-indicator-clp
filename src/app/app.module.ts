@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { SharedModule } from './shared/shared.module'; 
+import { HomeModule } from './features/home/home.module';
+import { FeaturesModule } from "./features/features.module";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,9 +14,10 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule,
-    SharedModule
-  ],
+    HomeModule,
+    FeaturesModule,
+    HttpClientModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })
